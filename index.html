@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de formulario</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function mostrar() {
+        var nom= document.getElementById('nombre').value;
+        var ed= document.getElementById('edad').value;
+        alert('Ingreso el nombre:'+ nom);
+        alert('Y la edad:'+ ed);
+      }
+    </script>
+
+    //Ejercicio 1
+    <script type="text/javascript">
+      function calcularCubo(){
+        var v=document.getElementById('num').value;
+        v=parseInt(v);
+        var cubo=v*v*v;
+        alert(cubo);
+      }
+    </script>
+
+    //Ejercicio 2
+    <script type="text/javascript">
+      function mostrarMayor(){
+        var num1=document.getElementById('num1').value;
+        var num2=document.getElementById('num2').value;
+        num1=parseInt(num1);
+        num2=parseInt(num2);
+        if (num1>num2) {
+          alert('El manor es '+num1);
+        } else{
+          alert('El manor es '+num2);
+        }
+      }
+    </script>
+
+    //Ejercicio 3
+    <script>
+      function concatenar() {
+        var nom=document.getElementById('nombre').value;
+        var ape=document.getElementById('apellido').value;
+        document.getElementById('resultado').value=nom+ape;
+      }
+    </script>
+
+    <script type="text/javascript">
+      function verificar() {
+        var clave= document.getElementById('clave').value;
+        if (clave.length<5) {
+          alert('La clave no puede tener menos de 5 caracteres')
+        }else {
+          alert('Largo de clave correcta:')
+        }
+      }
+    </script>
+    <form class="" action="index.html" method="post">
+      Ingrese su nombre:
+      <input type="text" id="nombre">
+      <br>
+      Ingrese su edad:
+      <input type="text" id="edad">
+      <br>
+      <input type="button" value="Confirmar" onclick="mostrar()">
+      <br>------------------------------------------------------------<br>
+      Ingrese un valor para calcular:
+      <input type="text" id="num">
+      <br>
+      <input type="button" value="Calcular cubo" onClick="calcularCubo()">
+      <br>--------------------------------------------------------------<br>
+      Ingrese primer valor:
+      <input type="text" id="num1">
+      <br>
+      Ingrese segundo valor:
+      <input type="text" id="num2">
+      <br>
+      <input type="button" value="mostrar mayor" onClick="mostrarMayor()">
+      <br>-----------------------------------------------------------<br>
+      Ingrese nombre:
+      <input type="text" id="nombre">
+      <br>
+      Ingrese apellido:
+      <input type="text" id="apellido">
+      <br>
+      <input type="button" value="Concatenar datos ingresados" onClick="concatenar()">
+      <br>
+      <input type="text" id="resultado">
+      <br>----------------------------<br>
+      Ingrese clave:
+      <input type="password" id="password">
+      <br>
+      <input type="button" value="Confirmar" onclick="verificar()">
+    </form>
+
+  </body>
+</html>
